@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web.Script.Services;
 using System.Web.Services;
 
 namespace WebServicesDemo
@@ -36,6 +37,7 @@ namespace WebServicesDemo
             return sum;
         }
 
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json, UseHttpGet = true)]
         [WebMethod(Description = "获取人员列表数据")]
         public List<Person> GetPersonList()
         {
